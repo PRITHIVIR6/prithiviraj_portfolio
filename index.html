@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prithiviraj Narayanasamy | Operations and Relationship Manager</title>
+<meta name="description" content="Operations and relationship manager with experience across banking, fuel retail and quick-service restaurants. MBA in Finance and Marketing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10242c; --ink-2:#3d525b; --paper:#f4f6f5; --card:#ffffff; --line:#d5dddb;
+  --petrol:#0d2c35; --petrol-2:#17434f; --amber:#f2a900; --on-petrol:#e8f0ee;
+  --display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"Public Sans","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--ink:#e6eeec;--ink-2:#a9bbb7;--paper:#0a1a20;--card:#102830;--line:#23414a}
+}
+:root[data-theme="dark"]{--ink:#e6eeec;--ink-2:#a9bbb7;--paper:#0a1a20;--card:#102830;--line:#23414a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:-.02em}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:var(--petrol);color:var(--on-petrol)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+nav b{font-family:var(--display);font-size:1.1rem}
+nav ul{display:flex;gap:22px;list-style:none;padding:0;font-size:.95rem}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{opacity:1;text-decoration:underline;text-decoration-color:var(--amber);text-underline-offset:6px}
+#theme{background:none;border:1px solid #ffffff40;color:inherit;border-radius:999px;padding:6px 14px;font:inherit;font-size:.85rem;cursor:pointer}
+@media(max-width:720px){nav ul{display:none}}
+
+/* hero */
+.hero{background:var(--petrol);color:var(--on-petrol);padding:84px 0 96px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;
+  background:repeating-linear-gradient(90deg,var(--amber) 0 40px,transparent 40px 80px)}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;margin-bottom:20px}
+.hero p.lead{font-size:1.2rem;max-width:34em;color:#c5d6d2}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;padding:13px 24px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--amber)}
+.btn.primary{background:var(--amber);color:#1b1500}
+.btn.ghost{color:var(--on-petrol)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .15s}
+
+/* odometer */
+.odo{background:var(--petrol-2);border:1px solid #ffffff22;border-radius:16px;padding:28px}
+.odo small{display:block;color:#a8c0bb;font-size:.95rem;margin-bottom:14px}
+.digits{display:flex;gap:8px}
+.digit{width:64px;height:92px;background:#06171c;border-radius:8px;overflow:hidden;position:relative;border:1px solid #ffffff18;box-shadow:inset 0 10px 14px #0008,inset 0 -10px 14px #0008}
+.digit span{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;transition:transform 1.8s cubic-bezier(.2,.8,.2,1)}
+.digit i{font:800 3.4rem/92px var(--display);font-style:normal;text-align:center;height:92px;color:var(--amber)}
+.odo .unit{margin-top:16px;font:700 1.4rem var(--display)}
+.odo p{color:#a8c0bb;font-size:.95rem;margin-top:6px}
+
+/* sections */
+section{padding:80px 0}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:12px}
+.sub{color:var(--ink-2);max-width:40em;margin-bottom:40px}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+.about p+p{margin-top:16px}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;align-self:start}
+.facts dt{font-weight:600;font-size:.9rem;color:var(--ink-2)}
+.facts dd{margin:0 0 14px;font-weight:500}
+.facts dd:last-child{margin-bottom:0}
+
+/* timeline: real sequence of roles */
+.tl{position:relative;padding-left:34px;border-left:3px solid var(--line);margin-left:6px}
+.job{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 28px;margin-bottom:28px}
+.job::before{content:"";position:absolute;left:-46px;top:30px;width:20px;height:20px;border-radius:50%;background:var(--paper);border:5px solid var(--amber)}
+.job.now{border-color:var(--amber)}
+.job h3{font-size:1.5rem}
+.org{color:var(--ink-2);font-weight:500;margin:4px 0 4px}
+.when{display:inline-block;font-size:.88rem;font-weight:600;background:var(--petrol);color:var(--on-petrol);padding:3px 12px;border-radius:999px;margin:6px 0 14px}
+.job ul{padding-left:20px}
+.job li{margin-bottom:6px}
+.job li::marker{color:var(--amber)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.group{border-top:4px solid var(--amber);padding-top:16px}
+.group h3{font-size:1.25rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
+.chips li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:.92rem}
+
+/* education */
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.edu div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.edu .big{border-color:var(--amber);border-width:2px}
+.edu b{font-family:var(--display);font-size:1.25rem;display:block}
+.edu em{display:block;font-style:normal;color:var(--ink-2);margin-top:4px}
+.edu span{display:block;font-size:.88rem;font-weight:600;margin-top:10px;color:var(--ink-2)}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:40px}
+.more h3{font-size:1.1rem;margin-bottom:8px}
+
+/* contact */
+.contact{background:var(--petrol);color:var(--on-petrol)}
+.contact h2{color:#fff}
+.contact .sub{color:#c5d6d2}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.cards a{display:block;background:var(--petrol-2);border:1px solid #ffffff22;border-radius:14px;padding:22px;text-decoration:none;transition:border-color .15s}
+.cards a:hover{border-color:var(--amber)}
+.cards small{display:block;color:#a8c0bb;margin-bottom:4px}
+.cards b{font-size:1.1rem;word-break:break-all}
+footer{background:#08202a;color:#8fa9a4;text-align:center;padding:22px;font-size:.9rem}
+
+@media(max-width:820px){
+  .hero .wrap,.about{grid-template-columns:1fr}
+  .digit{width:52px;height:78px}.digit i{font-size:2.8rem;line-height:78px;height:78px}
+  section{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <b>Prithiviraj N.</b>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme" type="button" aria-label="Switch colour theme">Theme</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Prithiviraj Narayanasamy</h1>
+      <p class="lead">I run teams and operations that customers can rely on. Over the years I have managed a bank's client relationships, a busy pizza store and a fuel station, and I now lead a Jio-bp Mobility Station in Villupuram.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="#experience">See my experience</a>
+      </div>
+    </div>
+    <div class="odo" role="img" aria-label="Years of work experience">
+      <small>Years in customer-facing management</small>
+      <div class="digits" id="digits"></div>
+      <div class="unit">years since April 2015</div>
+      <p>Banking, quick-service restaurants and fuel retail.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2>About me</h2>
+      <p>I am a relationship manager and operations leader with an MBA in Finance and Marketing. In banking I worked with current account customers, helping them with cash management solutions and building long-term trust. In retail and food service I managed daily operations, budgets, inventory and teams.</p>
+      <p>My approach is simple: know the customer's needs, keep the process running smoothly, and give the team clear tasks and honest feedback. That has helped me meet sales goals and streamline how stores work.</p>
+    </div>
+    <dl class="facts">
+      <dt>Current role</dt><dd>RO Manager, Jio-bp Mobility Station</dd>
+      <dt>Based in</dt><dd>Villupuram, Tamil Nadu, India</dd>
+      <dt>Languages</dt><dd>Tamil, English, Telugu</dd>
+      <dt>Tools</dt><dd>MS Office, SAP</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="experience" style="background:var(--card)">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="sub">Three roles, from restaurant floor to bank to fuel station. Newest first.</p>
+    <div class="tl">
+
+      <article class="job now">
+        <h3>RO Manager</h3>
+        <p class="org">Jio-bp Mobility Station, Pennaivalam, Villupuram</p>
+        <span class="when">Aug 2024 to present</span>
+        <ul>
+          <li>Monitor daily operations so the workflow stays efficient.</li>
+          <li>Help customers with questions and resolve service issues and complaints.</li>
+          <li>Train and supervise staff, and assign tasks to match each person's skill level.</li>
+          <li>Keep safety protocols followed at all times.</li>
+          <li>Maintain inventory by ordering supplies and tracking sales.</li>
+          <li>Give performance feedback, apply corrective measures and keep staff communicating well.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Relationship Manager</h3>
+        <p class="org">ICICI Bank Limited, Chennai</p>
+        <span class="when">Feb 2023 to Jul 2024</span>
+        <ul>
+          <li>Built and maintained relationships with new and existing clients, offering CMS products to current account customers.</li>
+          <li>Talked with clients regularly to understand their needs, review their product use and cross-sell.</li>
+          <li>Achieved goals for sales of bank products and exceeded customer service metrics.</li>
+          <li>Kept up with banking regulations and compliance requirements to reduce risk for clients and the bank.</li>
+          <li>Worked with cross-functional teams to manage high-profile accounts and improve satisfaction.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Guest Delight Manager</h3>
+        <p class="org">Domino's Pizza, Jubilant FoodWorks Limited, Kottayam, Kerala</p>
+        <span class="when">Apr 2015 to Nov 2022</span>
+        <ul>
+          <li>Managed daily operations, including budgets, inventory control and vendor relations.</li>
+          <li>Held regular staff meetings, recognised achievements and gave constructive feedback.</li>
+          <li>Found inefficiencies in processes and improved workflows to raise productivity.</li>
+          <li>Analysed guest feedback and made changes based on it.</li>
+          <li>Enforced company policies and kept cleanliness and quality standards high.</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="sub">What I bring to a team, grouped by the kind of work.</p>
+    <div class="skills">
+      <div class="group"><h3>Operations</h3>
+        <ul class="chips"><li>Operations management</li><li>Operational efficiency</li><li>Inventory management</li><li>Cost control</li><li>Shift scheduling</li><li>Expense tracking</li><li>Emergency response</li><li>Change management</li></ul></div>
+      <div class="group"><h3>Customers and sales</h3>
+        <ul class="chips"><li>Relationship management</li><li>Client acquisition</li><li>Customer service</li><li>Guest relations</li><li>Sales strategy</li><li>Marketing</li><li>Service support</li></ul></div>
+      <div class="group"><h3>People</h3>
+        <ul class="chips"><li>Team management</li><li>Employee onboarding</li><li>Performance evaluations</li><li>Employee retention</li><li>Teamwork</li><li>Cross-functional work</li></ul></div>
+      <div class="group"><h3>Analysis and planning</h3>
+        <ul class="chips"><li>Analytical thinking</li><li>Data analysis</li><li>Key performance indicators</li><li>Documentation and reporting</li><li>Problem solving</li><li>Prioritisation</li><li>Time management</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="education" style="background:var(--card)">
+  <div class="wrap">
+    <h2>Education</h2>
+    <p class="sub">A commerce background that grew into an MBA.</p>
+    <div class="edu">
+      <div class="big"><b>MBA, Finance and Marketing</b><em>Vinayaka Mission University, Salem</em><span>2012 to 2014</span></div>
+      <div><b>B.Com, Commerce</b><em>Thiruvalluvar University, Vellore</em><span>2009 to 2012</span></div>
+      <div><b>HSC, Commerce</b><em>NLC Boys Hr. Sec. School, Neyveli</em><span>2007 to 2009</span></div>
+      <div><b>SSLC</b><em>NLC Boys Hr. Sec. School, Neyveli</em><span>2006 to 2007</span></div>
+    </div>
+    <div class="more">
+      <div><h3>Languages</h3><p>Tamil, English and Telugu.</p></div>
+      <div><h3>Technical skills</h3><p>MS Office and SAP.</p></div>
+      <div><h3>Outside work</h3><p>Bike riding, travelling, movies and music.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p class="sub">Open to conversations about operations, relationship management and team leadership roles.</p>
+    <div class="cards">
+      <a href="mailto:rajyzfr1@gmail.com"><small>Email</small><b>rajyzfr1@gmail.com</b></a>
+      <a href="tel:+919600625757"><small>Phone</small><b>+91 96006 25757</b></a>
+      <a href="https://www.google.com/maps/search/Villupuram+Tamil+Nadu" target="_blank" rel="noopener"><small>Location</small><b>Villupuram, Tamil Nadu 605803</b></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>&copy; <span id="yr"></span> Prithiviraj Narayanasamy</footer>
+
+<script>
+(function(){
+  // Odometer: years since April 2015, rolls once on load
+  var now=new Date(), start=new Date(2015,3,1);
+  var years=Math.floor((now-start)/(365.25*24*3600*1000));
+  var str=String(years).padStart(2,"0").split("");
+  var box=document.getElementById("digits");
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var strips=[];
+  str.forEach(function(d){
+    var cell=document.createElement("div");cell.className="digit";
+    var s=document.createElement("span");
+    for(var i=0;i<=9;i++){var n=document.createElement("i");n.textContent=i;s.appendChild(n);}
+    cell.appendChild(s);box.appendChild(cell);strips.push([s,Number(d)]);
+  });
+  function roll(){
+    strips.forEach(function(p,idx){
+      var h=p[0].firstChild.offsetHeight;
+      p[0].style.transitionDelay=(idx*0.25)+"s";
+      p[0].style.transform="translateY(-"+(p[1]*h)+"px)";
+    });
+  }
+  if(reduce){strips.forEach(function(p){p[0].style.transition="none"});}
+  requestAnimationFrame(function(){requestAnimationFrame(roll)});
+  window.addEventListener("resize",function(){strips.forEach(function(p){p[0].style.transition="none";p[0].style.transitionDelay="0s";var h=p[0].firstChild.offsetHeight;p[0].style.transform="translateY(-"+(p[1]*h)+"px)"})});
+
+  document.getElementById("yr").textContent=now.getFullYear();
+
+  // Theme toggle
+  var root=document.documentElement;
+  document.getElementById("theme").addEventListener("click",function(){
+    var dark=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&window.matchMedia("(prefers-color-scheme: dark)").matches);
+    root.setAttribute("data-theme",dark?"light":"dark");
+  });
+})();
+</script>
+</body>
+</html>
